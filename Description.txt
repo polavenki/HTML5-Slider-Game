@@ -1,0 +1,19 @@
+Assignment Description
+The assignment is to build a javascript, native android, or native iOS implementation of a 4x4 slider puzzle. Clicking or tapping on a tile should
+ slide it to an open space. Clicking or tapping on a tile that can legally move multiple tiles should work as well. 
+ Dragging should smoothly move tiles, including multiple tiles if a row or column can be 
+pushed along. If you release, tile should smoothly move to correct spot. If move is over halfway to complete, the move should complete. 
+If less than halfway, tile(s) should
+ revert to original position. On multi touch devices, multiple touch points should not break the puzzle, rotate or zoom.
+
+Your submission will be evaluated based on code quality (elegance, readability, flexibility) and feel of the implementation (responsive to touch and drags, tiles move smoothly). 
+
+Your implementation should work well on iOS and Android mobile browsers or as a native app.
+
+Below is an explanation of the materials:
+•slider.jpg - An image showing the mixed up puzzle.
+•globe.jpg - Image for puzzle.
+
+Media:UIE_Slider_Puzzle--slider.jpg
+
+Media:UIE_Slider_Puzzle--globe.jpg

@@ -1,0 +1,29 @@
+#mainContent{margin : 0 auto;width: 640px;}
+#source_holder{width: 640px; height: 640px; background: url(../images/UIE_Slider_Puzzle--globe.jpg) no-repeat}
+button{width : 100px; height: 30px;margin-right:10px;}
+.hide{display:none;}
+.show{ display:block;}
+.floatleft{ float : left;}
+.tile{ width: 160px; height: 160px; background: url(../images/UIE_Slider_Puzzle--slider.jpg) no-repeat;}
+.tile.tile00{background-position: -18px -6px;}
+.tile.tile01{background-position: -180px -6px;}
+.tile.tile02{background-position: -342px -6px;}
+.tile.tile03{background-position: -504px -6px;}
+
+.tile.tile10{background-position: -18px -168px;}
+.tile.tile11{background-position: -180px -168px;}
+.tile.tile12{background-position: -342px -168px;}
+.tile.tile13{background-position: -504px -168px;}
+
+.tile.tile20{background-position: -18px -330px;}
+.tile.tile21{background-position: -180px -330px;}
+.tile.tile22{background-position: -342px -330px;}
+.tile.tile23{background-position: -504px -330px;}
+
+.tile.tile30{background-position: -18px -492px;}
+.tile.tile31{background-position: -180px -492px;}
+.tile.tile32{background-position: -342px -492px;}
+.tile.tile33{background-position: -504px -492px;}
+
+
+.buddy_drag_clone{position: fixed; border: 1px solid #dcdcdc; z-index: 200012; cursor:pointer;}

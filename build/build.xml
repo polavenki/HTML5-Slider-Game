@@ -1,0 +1,64 @@
+<project name="All" basedir=".">
+
+	<property name="PROD_DIR" value="../prod" />
+	<property name="SRC_JS_DIR" value="../js" />
+	<property name="SRC_CSS_DIR" value="../css" />
+	<property name="JS_CAT" value="${PROD_DIR}/slider-cat.js" />
+	<property name="JS_MIN" value="${PROD_DIR}/slider-min.js" />
+	<property name="CSS_MIN" value="${PROD_DIR}/slider-min.css" />
+	<property name="YUI" value="./yuicompressor-2.4.6.jar" description="YUICompressor" />
+
+	<target name="js"  description="Concatenate JavaScript source files">
+		<echo message="Building ${JS_CAT}" />
+	<concat fixlastline="yes" destfile="${JS_CAT}">
+		  <fileset dir="${SRC_JS_DIR}/" includes="slider.js" />
+		  <fileset dir="${SRC_JS_DIR}/Controller" includes="*.js" />
+			  <fileset dir="${SRC_JS_DIR}/Model" includes="*.js" />
+			  <fileset dir="${SRC_JS_DIR}/View" includes="*.js" />
+		</concat>
+		<echo message="${JS_CAT} built." />
+	</target>
+
+	<target name="js.min" depends="js" description="Minimize JavaScript files">
+		<echo message="Building ${JS_MIN}" />
+		<apply executable="java" parallel="false" verbose="true" >
+			  <fileset dir="${PROD_DIR}">
+					<include name="slider-cat.js" />
+			  </fileset>
+			  <arg line="-jar" />
+			  <arg path="${YUI}" />
+			  <arg value="${PROD_DIR}/slider-cat.js"/>
+			  <arg value="--charset" />
+			  <arg value="utf-8" />
+			  <arg value="--line-break" />
+			  <arg value="300" />
+			  <arg value="-o" />
+			  <arg value="${PROD_DIR}/slider-min.js"/>
+		</apply>
+		<echo message="${JS_MIN} built." />
+	</target>
+	
+	<target name="css.min"  description="Minimize CSS files">
+		<echo message="Building ${CSS_MIN}" />
+		<apply executable="java" parallel="false" verbose="true" >
+			  <fileset dir="${SRC_CSS_DIR}">
+					<include name="slider.css" />
+			  </fileset>
+			  <arg line="-jar" />
+			  <arg path="${YUI}" />
+			  <arg value="${SRC_CSS_DIR}/slider.css"/>
+			  <arg value="--charset" />
+			  <arg value="utf-8" />
+			  <arg value="--line-break" />
+			  <arg value="300" />
+			  <arg value="-o" />
+			  <arg value="${PROD_DIR}/slider-min.css"/>
+		</apply>
+		<echo message="${CSS_MIN} built." />
+	</target>
+	
+	<target name="min" depends = "css.min,js.min"></target>
+	
+
+
+</project>
