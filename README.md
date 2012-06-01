@@ -3,7 +3,7 @@ HTML5-Slider-Game
 
 HTML5 , Javascript implementation of a 4x4 slider game.
 
-Game conditions
+Game conditions:-
 
 Clicking or tapping on a tile should slide it to an open space. 
 Clicking or tapping on a tile that can legally move multiple tiles should work as well. 
