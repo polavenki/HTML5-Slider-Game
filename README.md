@@ -1,5 +1,5 @@
 HTML5-Slider-Game
-=================
+===================
 
 HTML5 , Javascript implementation of a 4x4 slider game.
 
@@ -13,4 +13,4 @@ If the tile is released then it should smoothly move to correct spot.
 	If move is over halfway to complete, the move should complete. 
 	If less than halfway, tile(s) should revert to original position.
 
-Game can be viewed at http://polavenki.appspot.com 
+Please find the demo @ http://polavenki.appspot.com
